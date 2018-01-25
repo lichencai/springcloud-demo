@@ -4,10 +4,25 @@ server:
 spring:
   application:
     name:  gateway-service-zuul
-      
+#####################################################################    
 #这里的配置表示，访问/it/** 直接重定向到http://www.ityouknow.com/**
+#下面是固定的配置，即只要有新的url则需要进行一个配置
+# zuul:
+#   routes:
+#     baidu:
+#       path:  /it/**
+#       url:  http://www.ityouknow.com/
+#####################################################################
+
+#实现实例名的映射，可以实现负载均衡
 zuul:
   routes:
-    baidu:
-      path:  /it/**
-      url:  http://www.ityouknow.com/
+    api-a:
+      path:  /producer/**
+      serviceId:  a-bootiful-client
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://172.16.188.173:8761/eureka/
+##################################################################### 

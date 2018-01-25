@@ -30,4 +30,12 @@ class ServiceInstanceRestController {
     public List<ServiceInstance> serviceInstancesByApplicationName(@PathVariable String applicationName) {
         return this.discoveryClient.getInstances(applicationName);
     }
+    
+    /**
+     * 通过zuul测试负载均衡
+     */
+    @RequestMapping("/zuul/balanced")
+    public String zuulBalanced(String name) {
+        return "hello " + name + " one";
+    }
 }
