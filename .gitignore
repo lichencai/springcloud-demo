@@ -1,1 +1,10 @@
 /target/
+
+/.classpath
+/.project
+/client/.classpath
+/client/.project
+/customer/.classpath
+/customer/.project
+/server/.classpath
+/server/.project
