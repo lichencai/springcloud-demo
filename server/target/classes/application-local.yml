@@ -3,7 +3,7 @@ server:
       
 eureka:
   instance:
-    hostname: licc_localhost
+    hostname: localhost
   client:
     register-with-eureka:  false
     fetch-registry:  false
