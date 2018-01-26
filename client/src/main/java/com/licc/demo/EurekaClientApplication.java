@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @SpringBootApplication
 public class EurekaClientApplication {
 	public static void main(String[] args) {
         SpringApplication.run(EurekaClientApplication.class, args);
     }
 }
-
+/*
 @RestController
 class ServiceInstanceRestController {
 
@@ -31,11 +31,12 @@ class ServiceInstanceRestController {
         return this.discoveryClient.getInstances(applicationName);
     }
     
-    /**
+    *//**
      * 通过zuul测试负载均衡
-     */
+     *//*
     @RequestMapping("/zuul/balanced")
     public String zuulBalanced(String name) {
         return "hello " + name + " one";
     }
 }
+*/

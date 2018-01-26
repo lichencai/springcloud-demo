@@ -1,0 +1,13 @@
+server:
+  port:  7001
+spring:
+  application:
+    name:  config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://github.com/lichencai/springcloud-config
+          searchPaths:  config-repo
+          username:  793385991@qq.com
+          password:  159131lcc
