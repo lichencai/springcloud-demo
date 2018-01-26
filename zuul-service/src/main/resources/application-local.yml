@@ -15,14 +15,33 @@ spring:
 #####################################################################
 
 #实现实例名的映射，可以实现负载均衡
+# zuul:
+#   routes:
+#     api-a:
+#       path:  /producer/**
+#       serviceId:  a-bootiful-client
+# 
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone:  http://172.16.188.173:8761/eureka/
+##################################################################### 
+
+#下面的配置是不通过服务注册中心进行配置的
+ribbon:
+  eureka:
+    enabled:  false
+
+#配置在配置文件中的路由信息
 zuul:
   routes:
-    api-a:
-      path:  /producer/**
-      serviceId:  a-bootiful-client
+    elicense:
+      url:  http://localhost:8080/elicense
+      path:  /elicense/**
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone:  http://172.16.188.173:8761/eureka/
-##################################################################### 
+
+
+
+
+
+
