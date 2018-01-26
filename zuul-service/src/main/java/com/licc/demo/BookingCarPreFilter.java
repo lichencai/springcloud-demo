@@ -17,6 +17,7 @@ public class BookingCarPreFilter extends ZuulFilter{
 
 	@Override
 	public Object run() {
+		System.out.println("=============BookingCarPreFilter===========");
 		try {
 			RequestContext ctx = RequestContext.getCurrentContext();
 			HttpServletRequest request = ctx.getRequest();
