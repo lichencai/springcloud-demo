@@ -61,5 +61,6 @@
 		<module>client</module>
 		<module>customer</module>
     <module>zuul-service</module>
-  </modules>
+    <module>config-server</module>
+	</modules>
 </project>
