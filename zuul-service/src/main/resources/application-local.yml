@@ -1,9 +1,5 @@
 server:
   port: 8884
-  
-spring:
-  application:
-    name:  gateway-service-zuul
 #####################################################################    
 #这里的配置表示，访问/it/** 直接重定向到http://www.ityouknow.com/**
 #下面是固定的配置，即只要有新的url则需要进行一个配置
@@ -30,16 +26,23 @@ spring:
 #下面的配置是不通过服务注册中心进行配置的
 ribbon:
   eureka:
-    enabled:  false
+    enabled:  true
 
 #配置在配置文件中的路由信息
-zuul:
-  routes:
-    elicense:
-      url:  http://localhost:8080/elicense
-      path:  /elicense/**
+# zuul:
+#   routes:
+#     elicense:
+#       url:  http://localhost:8080/elicense
+#       path:  /elicense/**
 
-
+spring:
+  application:
+    name:  gateway-service-zuul
+  datasource:
+      url: jdbc:mysql://172.16.189.201:3306/test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: Admin123
+      driver-class-name: com.mysql.jdbc.Driver
 
 
 

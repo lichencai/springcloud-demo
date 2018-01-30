@@ -12,7 +12,7 @@ import com.netflix.zuul.context.RequestContext;
 /**
  * 用户鉴权
  */
-@Component
+//@Component
 public class BookingCarPreFilter extends ZuulFilter{
 
 	@Override

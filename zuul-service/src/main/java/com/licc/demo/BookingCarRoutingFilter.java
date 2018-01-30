@@ -10,7 +10,7 @@ import com.netflix.zuul.context.RequestContext;
 /**
  * 拦截请求的实现
  */
-@Component
+//@Component
 public class BookingCarRoutingFilter extends ZuulFilter{
 
 	@Override
