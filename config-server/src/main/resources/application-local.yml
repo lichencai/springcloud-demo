@@ -10,4 +10,4 @@ spring:
           uri:  https://github.com/lichencai/springcloud-config
           searchPaths:  config-repo
           username:  793385991@qq.com
-          password:  159131lcc
+          password:  ####替换成这个用户的密码
